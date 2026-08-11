@@ -11,11 +11,95 @@
 </head>
 
 <body>
-    <nav class="w-full h-20 px-16 items-center flex">
-        <div class="w-20 h-20">
-            <img class="rounded-full" src="wellness.avif" alt="">
+    <nav class="relative h-20 w-full px-4 md:px-10 flex items-center justify-between md:justify-center">
+
+        <!-- Logo -->
+        <div class="w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+            <img class="w-full h-full object-cover rounded-full" src="wellness.avif" alt="">
+        </div>
+
+        <!-- Hamburger button - mobile only -->
+        <button id="menuBtn"
+            class="md:hidden h-8 w-8 flex flex-col justify-center items-center gap-[5px] cursor-pointer">
+            <span id="bar1" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+            <span id="bar2" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+            <span id="bar3" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div id="navMenu" class="md:ms-8 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out
+               absolute top-20 left-0 w-full bg-white shadow-md px-4
+               md:static md:max-h-none md:opacity-100 md:w-auto md:shadow-none md:overflow-visible md:px-0">
+            <ul class="flex flex-col gap-4 py-4 md:flex-row md:gap-5 md:py-0 text-[14px]">
+                <li class="text-[#7a2333] border-b-[1px] border-[#7a2333] cursor-pointer w-fit">Home</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Services</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Pricing</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Patient</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Our Team</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Gallery</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">About</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Blog</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Contact</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Join Our Team</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Insureance</li>
+            </ul>
+        </div>
+
+        <!-- Everything below: hidden on mobile, visible from md up -->
+        <div class="hidden md:flex md:items-center">
+            <button
+                class="h-10 w-40 bg-[#7a2333] ms-8 rounded-4xl flex items-center justify-center text-white text-[14px] cursor-pointer">
+                Book Appoinment
+            </button>
+
+            <div class="h-6 w-6 ms-7 text-black">
+                <i class="fa-brands fa-google"></i>
+            </div>
+
+            <div class="h-16 w-44 ms-1">
+                <div class="text-[10px] text-amber-300">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-black text-[14px] ms-1 font-semibold">5.0</span>
+                </div>
+                <div class="text-[12px]">Top Rated Services 2026</div>
+                <div class="text-[11px] text-gray-500">Verified By Trustindex</div>
+            </div>
         </div>
     </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+
+        let open = false;
+
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+
+            if (open) {
+                navMenu.classList.remove('max-h-0', 'opacity-0');
+                navMenu.classList.add('max-h-96', 'opacity-100');
+
+                bar1.style.transform = 'translateY(7px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                navMenu.classList.remove('max-h-96', 'opacity-100');
+                navMenu.classList.add('max-h-0', 'opacity-0');
+
+                bar1.style.transform = 'none';
+                bar2.style.opacity = '1';
+                bar3.style.transform = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
