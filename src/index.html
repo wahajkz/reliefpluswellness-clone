@@ -72,31 +72,43 @@
         </div>
     </nav>
 
-   <script>
-    menuBtn.addEventListener('click', () => {
-    open = !open;
+    <script>
+        menuBtn.addEventListener('click', () => {
+            open = !open;
 
-    if (open) {
-        navMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
-        navMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+            if (open) {
+                navMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+                navMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
 
-        bar1.style.transform = 'translateY(7px) rotate(45deg)';
-        bar2.style.opacity = '0';
-        bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
-    } else {
-        navMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-        navMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+                bar1.style.transform = 'translateY(7px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                navMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                navMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
 
-        bar1.style.transform = 'none';
-        bar2.style.opacity = '1';
-        bar3.style.transform = 'none';
-    }
-});
-   </script>
+                bar1.style.transform = 'none';
+                bar2.style.opacity = '1';
+                bar3.style.transform = 'none';
+            }
+        });
+    </script>
 
     <div>
-        <div class="w-full h-[667px] bg-amber-950">
-
+        <div class="w-full h-[667px] bg-[#211a19]">
+            <div class="ms-3 md:ms-28 flex flex-col gap-7">
+                <div
+                    class="h-12 w-96 md:w-[526px] text-[12px] md:text-[16px] border-1 border-white rounded-4xl mt-5 flex items-center justify-center text-white">
+                    RELIEF PLUS WELLNESS · EAST TORONTO WELLNESS CLINIC.</div>
+                <div class="h-fit w-96 md:w-[550px] text-white text-2xl md:text-4xl italic">Acupuncture, Brazilian
+                    Lymphatic Drainage & Osteopathic Therapy in East Toronto.</div>
+                <div class="h-fit w-96 md:w-[525px] text-white font-bold md:text-[20px]">Relief Plus Wellness is a
+                    professional wellness clinic located at 1403 Gerrard St E, Toronto, offering Acupuncture,
+                    Osteopathic Therapy, Wet Cupping (Hijama), Cupping Therapy, Cosmetic Acupuncture, Tuina Massage &
+                    Gua Sha, Thai Oil Massage, Brazilian Lymphatic Drainage, and Head Massage. We proudly serve
+                    Leslieville, The Beaches, East York, Riverdale, Danforth, Greenwood-Coxwell, Upper Beaches, Little
+                    India, Scarborough, Downtown Toronto, and surrounding East Toronto communities.</div>
+            </div>
         </div>
     </div>
 </body>
