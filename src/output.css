@@ -37,7 +37,6 @@
     --text-5xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --radius-lg: 0.5rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -229,6 +228,12 @@
   .ms-8 {
     margin-inline-start: calc(var(--spacing) * 8);
   }
+  .ms-10 {
+    margin-inline-start: calc(var(--spacing) * 10);
+  }
+  .ms-12 {
+    margin-inline-start: calc(var(--spacing) * 12);
+  }
   .ms-\[30px\] {
     margin-inline-start: 30px;
   }
@@ -264,9 +269,6 @@
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
-  }
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
   }
   .block {
     display: block;
@@ -385,9 +387,6 @@
   .w-96 {
     width: calc(var(--spacing) * 96);
   }
-  .w-\[1px\] {
-    width: 1px;
-  }
   .w-\[120px\] {
     width: 120px;
   }
@@ -480,11 +479,17 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
   .gap-14 {
     gap: calc(var(--spacing) * 14);
   }
   .gap-\[5px\] {
     gap: 5px;
+  }
+  .self-center {
+    align-self: center;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -554,9 +559,6 @@
   .bg-\[\#ffffff\] {
     background-color: #ffffff;
   }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
   .bg-pink-100 {
     background-color: var(--color-pink-100);
   }
@@ -608,10 +610,6 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -785,6 +783,9 @@
     .md\:static {
       position: static;
     }
+    .md\:ms-0 {
+      margin-inline-start: 0px;
+    }
     .md\:ms-8 {
       margin-inline-start: calc(var(--spacing) * 8);
     }
@@ -821,8 +822,14 @@
     .md\:h-20 {
       height: calc(var(--spacing) * 20);
     }
+    .md\:h-\[450px\] {
+      height: 450px;
+    }
     .md\:h-auto {
       height: auto;
+    }
+    .md\:h-fit {
+      height: fit-content;
     }
     .md\:w-20 {
       width: calc(var(--spacing) * 20);
@@ -848,11 +855,17 @@
     .md\:w-\[550px\] {
       width: 550px;
     }
+    .md\:w-\[600px\] {
+      width: 600px;
+    }
     .md\:w-\[670px\] {
       width: 670px;
     }
     .md\:w-auto {
       width: auto;
+    }
+    .md\:w-fit {
+      width: fit-content;
     }
     .md\:translate-y-0 {
       --tw-translate-y: 0px;
@@ -881,6 +894,9 @@
     }
     .md\:gap-5 {
       gap: calc(var(--spacing) * 5);
+    }
+    .md\:self-auto {
+      align-self: auto;
     }
     .md\:overflow-visible {
       overflow: visible;
