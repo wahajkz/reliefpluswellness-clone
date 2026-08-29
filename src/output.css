@@ -10,7 +10,6 @@
       "Courier New", monospace;
     --color-red-900: oklch(39.6% 0.141 25.723);
     --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-rose-950: oklch(27.1% 0.105 12.094);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -242,9 +241,6 @@
   .ms-12 {
     margin-inline-start: calc(var(--spacing) * 12);
   }
-  .ms-14 {
-    margin-inline-start: calc(var(--spacing) * 14);
-  }
   .ms-\[30px\] {
     margin-inline-start: 30px;
   }
@@ -413,8 +409,17 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
+  }
+  .w-56 {
+    width: calc(var(--spacing) * 56);
+  }
   .w-60 {
     width: calc(var(--spacing) * 60);
+  }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
   }
   .w-96 {
     width: calc(var(--spacing) * 96);
@@ -496,6 +501,9 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
+  .gap-1 {
+    gap: var(--spacing);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -525,12 +533,6 @@
   }
   .gap-14 {
     gap: calc(var(--spacing) * 14);
-  }
-  .gap-44 {
-    gap: calc(var(--spacing) * 44);
-  }
-  .gap-48 {
-    gap: calc(var(--spacing) * 48);
   }
   .gap-\[5px\] {
     gap: 5px;
@@ -642,9 +644,6 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
-  .py-28 {
-    padding-block: calc(var(--spacing) * 28);
-  }
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
@@ -662,18 +661,6 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -701,6 +688,9 @@
   .text-\[15px\] {
     font-size: 15px;
   }
+  .text-\[17px\] {
+    font-size: 17px;
+  }
   .text-\[18px\] {
     font-size: 18px;
   }
@@ -710,8 +700,8 @@
   .text-\[25px\] {
     font-size: 25px;
   }
-  .text-\[40px\] {
-    font-size: 40px;
+  .text-\[42px\] {
+    font-size: 42px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -1042,6 +1032,9 @@
     }
     .md\:text-\[20px\] {
       font-size: 20px;
+    }
+    .md\:text-\[42px\] {
+      font-size: 42px;
     }
     .md\:opacity-100 {
       opacity: 100%;
