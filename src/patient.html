@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" href="wellness.avif">
+    <title>Relief Plus Wellness</title>
+</head>
+
+<body>
+    <nav class="relative h-20 w-full px-4 md:px-10 flex items-center justify-between md:justify-center">
+
+        <!-- Logo -->
+        <div class="w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+            <img class="w-full h-full object-cover rounded-full" src="wellness.avif" alt="">
+        </div>
+
+        <!-- Hamburger button - mobile only -->
+        <button id="menuBtn"
+            class="md:hidden h-8 w-8 flex flex-col justify-center items-center gap-[5px] cursor-pointer">
+            <span id="bar1" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+            <span id="bar2" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+            <span id="bar3" class="block h-[2px] w-6 bg-[#211a19] transition-all duration-300"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div id="navMenu" class="fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-white shadow-md px-4
+       overflow-y-auto opacity-0 -translate-y-4 pointer-events-none transition-all duration-300 ease-in-out
+       md:static md:h-auto md:w-auto md:shadow-none md:overflow-visible md:px-0
+       md:opacity-100 md:translate-y-0 md:pointer-events-auto md:ms-8">
+            <ul class="flex flex-col gap-4 py-6 md:flex-row md:gap-5 md:py-0 text-[13px]">
+                <li class="text-[#7a2333] border-b-[1px] border-[#7a2333] cursor-pointer w-fit">Home</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Services</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Pricing</li>
+                <a href="patient.html" class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Patient</a>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Our Team</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Gallery</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">About</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Blog</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Contact</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Join Our Team</li>
+                <li class="text-[#211a19cc] hover:text-[#7a2333] cursor-pointer">Insureance</li>
+            </ul>
+        </div>
+
+        <!-- Everything below: hidden on mobile, visible from md up -->
+        <div class="hidden md:flex md:items-center">
+            <button
+                class="h-10 w-40 bg-[#7a2333] ms-8 rounded-4xl flex items-center justify-center text-white text-[14px] cursor-pointer">
+                Book Appoinment
+            </button>
+
+            <div class="h-6 w-6 ms-7 text-black">
+                <i class="fa-brands fa-google"></i>
+            </div>
+
+            <div class="h-16 w-44 ms-1">
+                <div class="text-[10px] text-amber-300">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-black text-[14px] ms-1 font-semibold">5.0</span>
+                </div>
+                <div class="text-[12px]">Top Rated Services 2026</div>
+                <div class="text-[11px] text-gray-500">Verified By Trustindex</div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+
+            if (open) {
+                navMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+                navMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+
+                bar1.style.transform = 'translateY(7px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                navMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                navMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+
+                bar1.style.transform = 'none';
+                bar2.style.opacity = '1';
+                bar3.style.transform = 'none';
+            }
+        });
+    </script>
+
+    <div class="h-fit w-full bg-[#211a19]">
+        <div class="py-24"></div>
+    </div>
+</body>
+
+</html>
